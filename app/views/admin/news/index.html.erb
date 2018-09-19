@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-8">
+        <%= image_tag "latest-news-banner (2).jpg", class: "img-fluid" %>
+      </div>
+      <div class="col-md-4">
+        <% @news.each do |news| %>
+        <%= link_to news.title, admin_news_path(news) %><br>
+        <br>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

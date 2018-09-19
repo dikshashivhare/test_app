@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card mt-5">
+    <h2 class="card-header"><%= @news.title %>
+    </h2>
+    <div class="card-body">
+      <p class="lead"><%= @news.description %>
+      </p>
+      <p>
+        <h4 class="text-bold">Attachment:</h4>
+        <%= link_to "download", @news.attachment_url, class: "btn btn-danger", target: "_blank"%>
+      </p>
+
+      
+      <%= link_to 'Edit', edit_news_path(@news) %> |
+      <%= link_to 'Back', news_index_path %>
+    </div>
+  </div>
+</div>

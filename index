@@ -1,0 +1,22 @@
+<div class="inner-heading">
+  <div class="container">
+    <h2 class="text-center card-title" style="color: white">News</h2>
+  </div>
+</div>  
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <% @news.each do |news| %>
+    <div class="col-sm-3">
+      <div class="card">     
+        <div class="card-body">
+          <h5 class="card-title"><%= news.title %></h5>
+            <%= link_to news, class: "btn btn-primary" do %>
+              <i class="fa fa-eye"></i>Show
+            <%end%>
+        </div>
+      </div>      
+    </div>
+    <% end %>
+  </div>
+</div>
